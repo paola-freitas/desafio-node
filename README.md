@@ -26,7 +26,7 @@ $ git clone https://github.com/paola-freitas/desafio-node.git
 $ cd desafio-node
 
 #Abrir a pasta no VSCode e rodar a aplicação através do terminal
-$ node index.js
+$ nodemon server.js
 
 #Assim que o servidor aparecer disponível, pode-se consumir a API ou realizar testes através do Postman
 

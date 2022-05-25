@@ -1,9 +1,23 @@
 const express = require("express");
-const app = express();
+const routes = require("routes");
 
-const port = 8080;
+class App {
+    constructor(){
+        this.app = express();
+        this.routes();
+    }
 
-var DB = {
+    routes(){
+        this.app.use(routes);
+    }
+}
+
+module.exports = new App().app;
+
+
+
+
+/*var DB = {
     provider: {
         id: "BRCRD0028MG2ROML",
         name: "João",
@@ -11,13 +25,5 @@ var DB = {
         create_at: "2022-03-02T18:13:16",
         amount_products: 242
     }    
-}
+}*/
 
-app.get("/providers", (req, res) => {
-    res.statusCode = 200;
-    res.json(DB.provider);
-});
-
-app.listen(port,() => {
-    console.log(`App runnin in port ${port}`);
-});
