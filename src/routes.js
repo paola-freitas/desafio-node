@@ -5,12 +5,12 @@ const ProviderController = require("./app/Controllers/ProviderController")
 
 const routes = new Router();
 
-routes.get("/", Validation, ProviderController.read);
+routes.get("/", Validation, ProviderController.readProviders);
 
 routes.post("/createprovider", ProviderController.createProvider);
 
-routes.put("/putproviders/:provider", ProviderController.read);
+routes.patch("/updateproviders/:newId", ProviderController.updateProviders);
 
-routes.delete("/deleteproviders/:id", ProviderController.read);
+routes.delete("/deleteproviders/:id", ProviderController.deleteProviders);
 
 module.exports = routes;
