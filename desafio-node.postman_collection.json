@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "8e6ccd3f-35c9-4dbd-83c1-e30da84dd119",
+		"name": "desafio-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10389852"
+	},
+	"item": [
+		{
+			"name": "create provider",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"BRCRD0028MG2ROML\",\r\n    \"name\": \"João\",\r\n    \"company\": \"4intellingence\",\r\n    \"createat\": \"2022-03-02T18:13:16\",\r\n    \"amountproducts\": 242\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/createprovider",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createprovider"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read provider",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update provider",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"João\",\r\n    \"company\": \"4intellingence\",\r\n    \"createat\": \"2022-03-02T18:13:16\",\r\n    \"amountproducts\": 242\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateproviders/BRCRD0028MG2ROML",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateproviders",
+						"BRCRD0028MG2ROML"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete provider",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deleteproviders/BRCRD0028MG2ROML",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteproviders",
+						"BRCRD0028MG2ROML"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
